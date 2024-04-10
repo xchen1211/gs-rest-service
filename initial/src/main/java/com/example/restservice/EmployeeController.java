@@ -13,9 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 // Import the above-defined classes
 // to use the properties of those
 // classes
-import com.example.restservice.Employees;
-import com.example.restservice.EmployeeDAO;
-import com.example.restservice.Employee;
+
 
 // Creating the REST controller
 @RestController
@@ -23,7 +21,7 @@ import com.example.restservice.Employee;
 public class EmployeeController {
 
     @Autowired
-    private EmployeeDAO employeeDao;
+    private EmployeeManager employeeManager;
 
     // Implementing a GET method
     // to get the list of all
@@ -35,7 +33,7 @@ public class EmployeeController {
     public Employees getEmployees()
     {
 
-        return employeeDao
+        return employeeManager
                 .getAllEmployees();
     }
 
@@ -55,7 +53,7 @@ public class EmployeeController {
         // Creating an ID of an employee
         // from the number of employees
         Integer id
-                = employeeDao
+                = employeeManager
                 .getAllEmployees()
                 .getEmployeeList()
                 .size()
@@ -63,7 +61,7 @@ public class EmployeeController {
 
         employee.setId(id);
 
-        employeeDao
+        employeeManager
                 .addEmployee(employee);
 
         URI location
