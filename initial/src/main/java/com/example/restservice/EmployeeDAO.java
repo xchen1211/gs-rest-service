@@ -29,19 +29,22 @@ public class EmployeeDAO {
                         1,
                         "Prem",
                         "Tiwari",
-                        "chapradreams@gmail.com"));
+                        "chapradreams@gmail.com",
+                        "Software engineer"));
 
         list.getEmployeeList().add(
                 new Employee(
                         2, "Vikash",
                         "Kumar",
-                        "abc@gmail.com"));
+                        "abc@gmail.com",
+                        "UI designer"));
 
         list.getEmployeeList().add(
                 new Employee(
                         3, "Ritesh",
                         "Ojha",
-                        "asdjf@gmail.com"));
+                        "asdjf@gmail.com",
+                        "Admin"));
 
 
     }

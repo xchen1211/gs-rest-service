@@ -11,7 +11,7 @@ public class Employee {
     // the entity
     public Employee(
             Integer id, String firstName,
-            String lastName, String email)
+            String lastName, String email, String title)
     {
 
         super();
@@ -24,6 +24,8 @@ public class Employee {
 
         this.email = email;
 
+        this.title = title;
+
 
     }
 
@@ -35,6 +37,8 @@ public class Employee {
 
     private String email;
 
+    private String title;
+
     // Overriding the toString method
     // to find all the values
     @Override
@@ -45,7 +49,8 @@ public class Employee {
                 + id + ", firstName="
                 + firstName + ", lastName="
                 + lastName + ", email="
-                + email + "]";
+                + email + ", title="
+                + title + "]";
 
 
     }
@@ -100,5 +105,17 @@ public class Employee {
     {
 
         this.email = email;
+    }
+
+    public String getTitle()
+    {
+
+        return title;
+    }
+
+    public void setTitle(String title)
+    {
+
+        this.title = title;
     }
 }
